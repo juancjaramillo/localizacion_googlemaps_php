@@ -5,7 +5,7 @@ function obtenerCoordenadas($direccion) {
     $direccion_codificada = urlencode($direccion);
     
     // Construye la URL de la solicitud a la API de Geocodificación de Google Maps
-    $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$direccion_codificada}&key=AIzaSyAVNS1lqK1cBs0raTgMXDpg_Rxp6C20ZQ4";
+    $url = "https://maps.googleapis.com/maps/api/geocode/json?address={$direccion_codificada}&key=YOUR_API_KEY";
     
     // Realiza la solicitud GET a la API
     $respuesta = file_get_contents($url);
@@ -61,7 +61,7 @@ if ($coordenadas) {
 		 <!-- Mapa de Google Maps -->
         <div id="map"></div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVNS1lqK1cBs0raTgMXDpg_Rxp6C20ZQ4"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 	 <!-- Script para cargar el mapa y los datos -->
     <script>
         function initMap() {
@@ -91,7 +91,7 @@ if ($coordenadas) {
         google.maps.event.addDomListener(window, 'load', initMap);
     </script>
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVNS1lqK1cBs0raTgMXDpg_Rxp6C20ZQ4&callback=initMap"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 </body>
 </html>
 
